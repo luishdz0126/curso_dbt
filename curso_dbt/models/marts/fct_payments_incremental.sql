@@ -5,9 +5,10 @@
     )
 }}
 
-select *
-from {{ ref('stg_payments') }}
+SELECT 
+*
+FROM {{ ref('stg_payments') }}
 
 {% if is_incremental() %}
-  where payment_id not in (select payment_id from {{ this }})
+    WHERE payment_id NOT IN (SELECT payment_id FROM {{ this }})
 {% endif %}

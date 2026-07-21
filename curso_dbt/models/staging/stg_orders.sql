@@ -1,6 +1,6 @@
-select
+SELECT
     order_id,
     customer_id,
     cast(order_date as date) as order_date,
-    status
-from {{ source('ecommerce', 'orders') }}
+    status,
+FROM {{ source('ecommerce', 'orders') }}

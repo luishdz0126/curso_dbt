@@ -1,7 +1,7 @@
 version: 2
 sources:
   - name: ecommerce
-    database: curso-gcp-dbt
+    database: "curso-gcp-dbt-503018"
     schema: raw_ecommerce
     tables:
       - name: customers
